@@ -4,7 +4,7 @@ import pandas as pd
 from sklearn.model_selection import cross_val_score
 from sklearn.ensemble import GradientBoostingClassifier
 import time
-from splitData import preprocess_bundesliga_data
+from Model_prediction.preprocess_Data_Prediction import preprocess_bundesliga_data
 
 class EnhancedFeatureOptimizer:
     def __init__(self, X, y, feature_names):

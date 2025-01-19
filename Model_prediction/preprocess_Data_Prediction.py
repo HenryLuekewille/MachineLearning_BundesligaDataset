@@ -23,8 +23,8 @@ def preprocess_bundesliga_data(training_csv_path, prediction_csv_path=None):
     
     # Define base features (without team prefix)
     base_features = [
-        'Goals', 'Shots', 'ShotsOnTarget', 
-        'Yellow', 'Red'  # Removed 'Corners'
+        'Goals', 'Shots', 'ShotsOnTarget',  
+         'Yellow', 'Red'
     ]
     
     def calculate_team_features(team_stats: Dict[str, List], team: str, is_home: bool) -> FeatureSet:

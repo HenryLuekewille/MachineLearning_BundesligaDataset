@@ -42,15 +42,15 @@ def process_csv(file_path, season):
     
     # Get the required columns
     df_modified = df[['Date', 'HomeTeam', 'AwayTeam', 'FTHG', 'FTAG', 'FTR',
-                      'HS', 'AS', 'HST', 'AST', 'HC', 'AC', 'HY', 'AY', 'HR', 'AR']].copy()
+                      'HS', 'AS', 'HST', 'AST', 'HC', 'AC', 'HY', 'AY', 'HR', 'AR','HF','AF']].copy()
     
     # Rename columns to match final format
     df_modified.columns = [
         'Date', 'HomeTeam', 'AwayTeam', 'HomeTeamGoals', 'AwayTeamGoals', 'Result',
         'HomeTeamShots', 'AwayTeamShots', 'HomeTeamShotsOnTarget', 'AwayTeamShotsOnTarget',
         'HomeTeamCorners', 'AwayTeamCorners', 'HomeTeamYellow', 'AwayTeamYellow',
-        'HomeTeamRed', 'AwayTeamRed'
-    ]
+        'HomeTeamRed', 'AwayTeamRed','HomeTeamFouls','AwayTeamFouls'
+        ]
     
     # Sort by date and calculate gamedays
     df_modified = df_modified.sort_values('Date')
