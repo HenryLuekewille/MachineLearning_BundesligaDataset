@@ -1,0 +1,308 @@
+KarlsruheGameday;Date;Weekday;HomeTeam;AwayTeam
+1.;02.08.24;20:30;(Fr);FC Koln;Hamburg;1;2
+1.;03.08.24;13:00;(Sa);Magdeburg;Elversberg;0;0
+1.;03.08.24;13:00;(Sa);Hannover;Regensburg;2;0
+1.;03.08.24;13:00;(Sa);Hertha;Paderborn;1;2
+1.;03.08.24;13:00;(Sa);Karlsruhe;Nurnberg;3;2
+1.;03.08.24;20:30;(Sa);Schalke 04;Braunschweig;5;1
+1.;04.08.24;13:30;(So);Greuther Furth;Preußen Münster;3;1
+1.;04.08.24;13:30;(So);Ulm;Kaiserslautern;1;2
+1.;04.08.24;13:30;(So);Darmstadt;FFortuna Dusseldorf;0;2
+2.;09.08.24;18:30;(Fr);Kaiserslautern;Greuther Furth;2;2
+2.;09.08.24;18:30;(Fr);Regensburg;Ulm;1;0
+2.;10.08.24;13:00;(Sa);Nurnberg;Schalke 04;3;1
+2.;10.08.24;13:00;(Sa);FFortuna Dusseldorf;Karlsruhe;0;0
+2.;10.08.24;13:00;(Sa);Elversberg;FC Koln;2;2
+2.;10.08.24;20:30;(Sa);Hamburg;Hertha;1;1
+2.;11.08.24;13:30;(So);Braunschweig;Magdeburg;1;3
+2.;11.08.24;13:30;(So);Preußen Münster;Hannover;0;0
+2.;11.08.24;13:30;(So);Paderborn;Darmstadt;3;1
+3.;23.08.24;18:30;(Fr);Hannover;Hamburg;1;0
+3.;23.08.24;18:30;(Fr);Karlsruhe;Elversberg;3;2
+3.;24.08.24;13:00;(Sa);Hertha;Regensburg;2;0
+3.;24.08.24;13:00;(Sa);Preußen Münster;Kaiserslautern;0;1
+3.;24.08.24;13:00;(Sa);Greuther Furth;Paderborn;1;1
+3.;24.08.24;20:30;(Sa);FC Koln;Braunschweig;5;0
+3.;25.08.24;13:30;(So);Magdeburg;Schalke 04;2;2
+3.;25.08.24;13:30;(So);Ulm;FFortuna Dusseldorf;1;2
+3.;25.08.24;13:30;(So);Darmstadt;Nurnberg;1;1
+4.;30.08.24;18:30;(Fr);FFortuna Dusseldorf;Hannover;1;0
+4.;30.08.24;18:30;(Fr);Regensburg;Greuther Furth;0;4
+4.;31.08.24;13:00;(Sa);Nurnberg;Magdeburg;0;4
+4.;31.08.24;13:00;(Sa);Hamburg;Preußen Münster;4;1
+4.;31.08.24;13:00;(Sa);Elversberg;Darmstadt;4;0
+4.;31.08.24;20:30;(Sa);Kaiserslautern;Hertha;3;4
+4.;01.09.24;13:30;(So);Braunschweig;Karlsruhe;1;2
+4.;01.09.24;13:30;(So);Schalke 04;FC Koln;1;3
+4.;01.09.24;13:30;(So);Paderborn;Ulm;0;0
+5.;13.09.24;18:30;(Fr);Karlsruhe;Schalke 04;2;0
+5.;13.09.24;18:30;(Fr);Preußen Münster;Paderborn;3;3
+5.;14.09.24;13:00;(Sa);Hannover;Kaiserslautern;3;1
+5.;14.09.24;13:00;(Sa);Ulm;Nurnberg;1;2
+5.;14.09.24;13:00;(Sa);Darmstadt;Braunschweig;1;1
+5.;14.09.24;20:30;(Sa);FC Koln;Magdeburg;1;2
+5.;15.09.24;13:30;(So);Hamburg;Regensburg;5;0
+5.;15.09.24;13:30;(So);Hertha;FFortuna Dusseldorf;0;2
+5.;15.09.24;13:30;(So);Greuther Furth;Elversberg;0;0
+6.;20.09.24;18:30;(Fr);Schalke 04;Darmstadt;3;5
+6.;20.09.24;18:30;(Fr);Paderborn;Hannover;2;1
+6.;21.09.24;13:00;(Sa);Nurnberg;Hertha;0;2
+6.;21.09.24;13:00;(Sa);Braunschweig;Greuther Furth;2;0
+6.;21.09.24;13:00;(Sa);FFortuna Dusseldorf;FC Koln;2;2
+6.;21.09.24;20:30;(Sa);Kaiserslautern;Hamburg;2;2
+6.;22.09.24;13:30;(So);Magdeburg;Karlsruhe;2;2
+6.;22.09.24;13:30;(So);Regensburg;Preußen Münster;0;3
+6.;22.09.24;13:30;(So);Elversberg;Ulm;1;3
+7.;27.09.24;18:30;(Fr);Greuther Furth;FFortuna Dusseldorf;1;2
+7.;27.09.24;18:30;(Fr);Ulm;Braunschweig;3;1
+7.;28.09.24;13:00;(Sa);Hamburg;Paderborn;2;2
+7.;28.09.24;13:00;(Sa);Regensburg;Kaiserslautern;0;0
+7.;28.09.24;13:00;(Sa);Darmstadt;Magdeburg;1;2
+7.;28.09.24;20:30;(Sa);Preußen Münster;Schalke 04;1;2
+7.;29.09.24;13:30;(So);FC Koln;Karlsruhe;4;4
+7.;29.09.24;13:30;(So);Hannover;Nurnberg;2;0
+7.;29.09.24;13:30;(So);Hertha;Elversberg;1;4
+8.;04.10.24;18:30;(Fr);Karlsruhe;Darmstadt;3;3
+8.;04.10.24;18:30;(Fr);Paderborn;Regensburg;3;0
+8.;05.10.24;13:00;(Sa);FC Koln;Ulm;2;0
+8.;05.10.24;13:00;(Sa);Nurnberg;Preußen Münster;3;2
+8.;05.10.24;13:00;(Sa);Elversberg;Kaiserslautern;1;0
+8.;05.10.24;20:30;(Sa);Schalke 04;Hertha;2;2
+8.;06.10.24;13:30;(So);Magdeburg;Greuther Furth;2;2
+8.;06.10.24;13:30;(So);Braunschweig;Hannover;2;0
+8.;06.10.24;13:30;(So);FFortuna Dusseldorf;Hamburg;0;3
+9.;18.10.24;18:30;(Fr);Hertha;Braunschweig;3;1
+9.;18.10.24;18:30;(Fr);Darmstadt;FC Koln;5;1
+9.;19.10.24;13:00;(Sa);Hannover;Schalke 04;1;0
+9.;19.10.24;13:00;(Sa);Preußen Münster;Elversberg;1;1
+9.;19.10.24;13:00;(Sa);Regensburg;FFortuna Dusseldorf;0;3
+9.;19.10.24;20:30;(Sa);Kaiserslautern;Paderborn;3;0
+9.;20.10.24;13:30;(So);Hamburg;Magdeburg;3;1
+9.;20.10.24;13:30;(So);Greuther Furth;Nurnberg;0;4
+9.;20.10.24;13:30;(So);Ulm;Karlsruhe;0;1
+10.;25.10.24;18:30;(Fr);FC Koln;Paderborn;1;2
+10.;25.10.24;18:30;(Fr);Nurnberg;Regensburg;8;3
+10.;26.10.24;13:00;(Sa);Schalke 04;Greuther Furth;3;4
+10.;26.10.24;13:00;(Sa);Karlsruhe;Hertha;1;3
+10.;26.10.24;13:00;(Sa);Elversberg;Hamburg;4;2
+10.;26.10.24;20:30;(Sa);FFortuna Dusseldorf;Kaiserslautern;3;4
+10.;27.10.24;13:30;(So);Magdeburg;Hannover;0;3
+10.;27.10.24;13:30;(So);Braunschweig;Preußen Münster;1;1
+10.;27.10.24;13:30;(So);Darmstadt;Ulm;1;1
+11.;01.11.24;18:30;(Fr);Preußen Münster;FFortuna Dusseldorf;1;0
+11.;01.11.24;18:30;(Fr);Ulm;Schalke 04;0;0
+11.;02.11.24;13:00;(Sa);Hannover;Karlsruhe;2;1
+11.;02.11.24;13:00;(Sa);Greuther Furth;Darmstadt;1;5
+11.;02.11.24;13:00;(Sa);Regensburg;Elversberg;1;0
+11.;02.11.24;20:30;(Sa);Hertha;FC Koln;0;1
+11.;03.11.24;13:30;(So);Kaiserslautern;Magdeburg;2;2
+11.;03.11.24;13:30;(So);Hamburg;Nurnberg;1;1
+11.;03.11.24;13:30;(So);Paderborn;Braunschweig;0;0
+12.;08.11.24;18:30;(Fr);Nurnberg;Kaiserslautern;0;0
+12.;08.11.24;18:30;(Fr);Braunschweig;Hamburg;3;1
+12.;09.11.24;13:00;(Sa);FC Koln;Greuther Furth;1;0
+12.;09.11.24;13:00;(Sa);Magdeburg;Ulm;0;0
+12.;09.11.24;13:00;(Sa);Darmstadt;Hertha;3;1
+12.;09.11.24;20:30;(Sa);FFortuna Dusseldorf;Paderborn;1;1
+12.;10.11.24;13:30;(So);Schalke 04;Regensburg;2;0
+12.;10.11.24;13:30;(So);Karlsruhe;Preußen Münster;1;1
+12.;10.11.24;13:30;(So);Elversberg;Hannover;3;1
+13.;22.11.24;18:30;(Fr);Preußen Münster;FC Koln;0;1
+13.;22.11.24;18:30;(Fr);Paderborn;Nurnberg;3;2
+13.;23.11.24;13:00;(Sa);FFortuna Dusseldorf;Elversberg;0;2
+13.;23.11.24;13:00;(Sa);Hannover;Darmstadt;1;2
+13.;23.11.24;13:00;(Sa);Hertha;Ulm;2;2
+13.;23.11.24;13:00;(Sa);Greuther Furth;Karlsruhe;2;3
+13.;23.11.24;20:30;(Sa);Hamburg;Schalke 04;2;2
+13.;24.11.24;13:30;(So);Kaiserslautern;Braunschweig;3;2
+13.;24.11.24;13:30;(So);Regensburg;Magdeburg;0;1
+14.;29.11.24;18:30;(Fr);Magdeburg;Hertha;1;3
+14.;29.11.24;18:30;(Fr);Schalke 04;Kaiserslautern;0;3
+14.;30.11.24;13:00;(Sa);FC Koln;Hannover;2;2
+14.;30.11.24;13:00;(Sa);Braunschweig;Regensburg;0;0
+14.;30.11.24;13:00;(Sa);Elversberg;Paderborn;1;3
+14.;30.11.24;20:30;(Sa);Darmstadt;Preußen Münster;0;0
+14.;01.12.24;13:30;(So);Nurnberg;FFortuna Dusseldorf;2;2
+14.;01.12.24;13:30;(So);Karlsruhe;Hamburg;1;3
+14.;01.12.24;13:30;(So);Ulm;Greuther Furth;1;1
+15.;06.12.24;18:30;(Fr);Paderborn;Schalke 04;2;4
+15.;06.12.24;18:30;(Fr);Elversberg;Nurnberg;2;1
+15.;07.12.24;13:00;(Sa);Kaiserslautern;Karlsruhe;3;1
+15.;07.12.24;13:00;(Sa);Hannover;Ulm;3;2
+15.;07.12.24;13:00;(Sa);Greuther Furth;Hertha;2;1
+15.;07.12.24;20:30;(Sa);Preußen Münster;Magdeburg;1;2
+15.;08.12.24;13:30;(So);FFortuna Dusseldorf;Braunschweig;5;0
+15.;08.12.24;13:30;(So);Hamburg;Darmstadt;2;2
+15.;08.12.24;13:30;(So);Regensburg;FC Koln;0;1
+16.;13.12.24;18:30;(Fr);Hertha;Preußen Münster;1;2
+16.;13.12.24;18:30;(Fr);Karlsruhe;Regensburg;4;2
+16.;14.12.24;13:00;(Sa);Magdeburg;Paderborn;1;1
+16.;14.12.24;13:00;(Sa);Schalke 04;FFortuna Dusseldorf;1;1
+16.;14.12.24;13:00;(Sa);Ulm;Hamburg;1;1
+16.;14.12.24;20:30;(Sa);Darmstadt;Kaiserslautern;5;1
+16.;15.12.24;13:30;(So);FC Koln;Nurnberg;3;1
+16.;15.12.24;13:30;(So);Braunschweig;Elversberg;0;3
+16.;15.12.24;13:30;(So);Greuther Furth;Hannover;1;0
+17.;20.12.24;18:30;(Fr);FFortuna Dusseldorf;Magdeburg;2;5
+17.;20.12.24;18:30;(Fr);Elversberg;Schalke 04;1;4
+17.;21.12.24;13:00;(Sa);Hamburg;Greuther Furth;5;0
+17.;21.12.24;13:00;(Sa);Preußen Münster;Ulm;0;0
+17.;21.12.24;13:00;(Sa);Paderborn;Karlsruhe;1;2
+17.;21.12.24;20:30;(Sa);Nurnberg;Braunschweig;1;0
+17.;22.12.24;13:30;(So);Kaiserslautern;FC Koln;0;1
+17.;22.12.24;13:30;(So);Hannover;Hertha;0;0
+17.;22.12.24;13:30;(So);Regensburg;Darmstadt;2;1
+18.;17.01.25;18:30;(Fr);FFortuna Dusseldorf;Darmstadt;2;2
+18.;17.01.25;18:30;(Fr);Regensburg;Hannover;0;1
+18.;18.01.25;13:00;(Sa);Kaiserslautern;Ulm;2;1
+18.;18.01.25;13:00;(Sa);Braunschweig;Schalke 04;0;0
+18.;18.01.25;13:00;(Sa);Preußen Münster;Greuther Furth;2;1
+18.;18.01.25;20:30;(Sa);Hamburg;FC Koln;1;0
+18.;19.01.25;13:30;(So);Nurnberg;Karlsruhe
+18.;19.01.25;13:30;(So);Paderborn;Hertha
+18.;19.01.25;13:30;(So);Elversberg;Magdeburg
+19.;24.01.25;18:30;(Fr);Magdeburg;Braunschweig
+19.;24.01.25;18:30;(Fr);Greuther Furth;Kaiserslautern
+19.;25.01.25;13:00;(Sa);FC Koln;Elversberg
+19.;25.01.25;13:00;(Sa);Schalke 04;Nurnberg
+19.;25.01.25;13:00;(Sa);Karlsruhe;FFortuna Dusseldorf
+19.;25.01.25;20:30;(Sa);Hertha;Hamburg
+19.;26.01.25;13:30;(So);Hannover;Preußen Münster
+19.;26.01.25;13:30;(So);Ulm;Regensburg
+19.;26.01.25;13:30;(So);Darmstadt;Paderborn
+20.;31.01.25;18:30;(Fr);Nurnberg;Darmstadt
+20.;31.01.25;18:30;(Fr);Elversberg;Karlsruhe
+20.;01.02.25;13:00;(Sa);Braunschweig;FC Koln
+20.;01.02.25;13:00;(Sa);FFortuna Dusseldorf;Ulm
+20.;01.02.25;13:00;(Sa);Regensburg;Hertha
+20.;01.02.25;20:30;(Sa);Schalke 04;Magdeburg
+20.;02.02.25;13:30;(So);Kaiserslautern;Preußen Münster
+20.;02.02.25;13:30;(So);Hamburg;Hannover
+20.;02.02.25;13:30;(So);Paderborn;Greuther Furth
+21.;07.02.25;18:30;(Fr);Preußen Münster;Hamburg
+21.;07.02.25;18:30;(Fr);Greuther Furth;Regensburg
+21.;08.02.25;13:00;(Sa);Magdeburg;Nurnberg
+21.;08.02.25;13:00;(Sa);Ulm;Paderborn
+21.;08.02.25;13:00;(Sa);Darmstadt;Elversberg
+21.;08.02.25;20:30;(Sa);Hertha;Kaiserslautern
+21.;09.02.25;13:30;(So);FC Koln;Schalke 04
+21.;09.02.25;13:30;(So);Hannover;FFortuna Dusseldorf
+21.;09.02.25;13:30;(So);Karlsruhe;Braunschweig
+22.;14.02.25;18:30;(Fr);Magdeburg;FC Koln
+22.;14.02.25;18:30;(Fr);Paderborn;Preußen Münster
+22.;15.02.25;13:00;(Sa);Kaiserslautern;Hannover
+22.;15.02.25;13:00;(Sa);Braunschweig;Darmstadt
+22.;15.02.25;13:00;(Sa);Elversberg;Greuther Furth
+22.;15.02.25;20:30;(Sa);FFortuna Dusseldorf;Hertha
+22.;16.02.25;13:30;(So);Nurnberg;SSV Ulm 1846
+22.;16.02.25;13:30;(So);Schalke 04;Karlsruher SC
+22.;16.02.25;13:30;(So);Regensburg;Hamburg
+23.;21.02.25;18:30;(Fr);Hamburg;Kaiserslautern
+23.;21.02.25;18:30;(Fr);Hertha;Nurnberg
+23.;22.02.25;13:00;(Sa);Karlsruhe;Magdeburg
+23.;22.02.25;13:00;(Sa);Preußen Münster;Regensburg
+23.;22.02.25;13:00;(Sa);Ulm;Elversberg
+23.;22.02.25;20:30;(Sa);Hannover;Paderborn
+23.;23.02.25;13:30;(So);FC Koln;FFortuna Dusseldorf
+23.;23.02.25;13:30;(So);Greuther Furth;Braunschweig
+23.;23.02.25;13:30;(So);Darmstadt;Schalke 04
+24.;28.02.25;18:30;(Fr);Schalke 04;Preußen Münster
+24.;28.02.25;18:30;(Fr);FFortuna Dusseldorf;Greuther Furth
+24.;01.03.25;13:00;(Sa);Kaiserslautern;Regensburg
+24.;01.03.25;13:00;(Sa);Nurnberg;Hannover
+24.;01.03.25;13:00;(Sa);Braunschweig;Ulm
+24.;01.03.25;20:30;(Sa);Karlsruhe;FC Koln
+24.;02.03.25;13:30;(So);Magdeburg;Darmstadt
+24.;02.03.25;13:30;(So);Paderborn;Hamburg
+24.;02.03.25;13:30;(So);Elversberg;Hertha
+25.;07.-09.03.2025;Kaiserslautern;Elversberg
+25.;07.-09.03.2025;Hamburg;FFortuna Dusseldorf
+25.;07.-09.03.2025;Hannover;Braunschweig
+25.;07.-09.03.2025;Hertha;Schalke 04
+25.;07.-09.03.2025;Preußen Münster;Nurnberg
+25.;07.-09.03.2025;Greuther Furth;Magdeburg
+25.;07.-09.03.2025;Regensburg;Paderborn
+25.;07.-09.03.2025;Ulm;FC Koln
+25.;07.-09.03.2025;Darmstadt;Karlsruhe
+26.;14.-16.03.2025;FC Koln;Darmstadt
+26.;14.-16.03.2025;Magdeburg;Hamburg
+26.;14.-16.03.2025;Nurnberg;Greuther Furth
+26.;14.-16.03.2025;Braunschweig;Hertha
+26.;14.-16.03.2025;Schalke 04;Hannover
+26.;14.-16.03.2025;FFortuna Dusseldorf;Regensburg
+26.;14.-16.03.2025;Karlsruhe;Ulm
+26.;14.-16.03.2025;Paderborn;Kaiserslautern
+26.;14.-16.03.2025;Elversberg;Preußen Münster
+27.;28.-30.03.2025;Kaiserslautern;FFortuna Dusseldorf
+27.;28.-30.03.2025;Hamburg;Elversberg
+27.;28.-30.03.2025;Hannover;Magdeburg
+27.;28.-30.03.2025;Hertha;Karlsruhe
+27.;28.-30.03.2025;Preußen Münster;Braunschweig
+27.;28.-30.03.2025;Paderborn;FC Koln
+27.;28.-30.03.2025;Greuther Furth;Schalke 04
+27.;28.-30.03.2025;Regensburg;Nurnberg
+27.;28.-30.03.2025;Ulm;Darmstadt
+28.;04.-06.04.2025;FC Koln;Hertha
+28.;04.-06.04.2025;Magdeburg;Kaiserslautern
+28.;04.-06.04.2025;Nurnberg;Hamburg
+28.;04.-06.04.2025;Braunschweig;Paderborn
+28.;04.-06.04.2025;Schalke 04;Ulm
+28.;04.-06.04.2025;FFortuna Dusseldorf;Preußen Münster
+28.;04.-06.04.2025;Karlsruhe;Hannover
+28.;04.-06.04.2025;Darmstadt;Greuther Furth
+28.;04.-06.04.2025;Elversberg;Regensburg
+29.;11.-13.04.2025;Kaiserslautern;Nurnberg
+29.;11.-13.04.2025;Hamburg;Braunschweig
+29.;11.-13.04.2025;Hannover;Elversberg
+29.;11.-13.04.2025;Hertha;Darmstadt
+29.;11.-13.04.2025;Preußen Münster;Karlsruhe
+29.;11.-13.04.2025;Paderborn;FFortuna Dusseldorf
+29.;11.-13.04.2025;Greuther Furth;FC Koln
+29.;11.-13.04.2025;Regensburg;Schalke 04
+29.;11.-13.04.2025;Ulm;Magdeburg
+30.;19./20.04.2025;FC Koln;Preußen Münster
+30.;19./20.04.2025;Magdeburg;Regensburg
+30.;19./20.04.2025;Nurnberg;Paderborn
+30.;19./20.04.2025;Braunschweig;Kaiserslautern
+30.;19./20.04.2025;Schalke 04;Hamburg
+30.;19./20.04.2025;Karlsruhe;Greuther Furth
+30.;19./20.04.2025;Ulm;Hertha
+30.;19./20.04.2025;Darmstadt;Hannover
+30.;19./20.04.2025;Elversberg;FFortuna Dusseldorf
+31.;25.-27.04.2025;Kaiserslautern;Schalke 04
+31.;25.-27.04.2025;FFortuna Dusseldorf;Nurnberg
+31.;25.-27.04.2025;Hamburg;Karlsruhe
+31.;25.-27.04.2025;Hannover;FC Koln
+31.;25.-27.04.2025;Hertha;Magdeburg
+31.;25.-27.04.2025;Preußen Münster;Darmstadt
+31.;25.-27.04.2025;Paderborn;Elversberg
+31.;25.-27.04.2025;Greuther Furth;Ulm
+31.;25.-27.04.2025;Regensburg;Braunschweig
+32.;02.-04.05.2025;FC Koln;Regensburg
+32.;02.-04.05.2025;Magdeburg;Preußen Münster
+32.;02.-04.05.2025;Nurnberg;Elversberg
+32.;02.-04.05.2025;Braunschweig;FFortuna Dusseldorf
+32.;02.-04.05.2025;Schalke 04;Paderborn
+32.;02.-04.05.2025;Hertha;Greuther Furth
+32.;02.-04.05.2025;Karlsruhe;Kaiserslautern
+32.;02.-04.05.2025;Ulm;Hannover
+32.;02.-04.05.2025;Darmstadt;Hamburg
+33.;09.-11.05.2025;Kaiserslautern;Darmstadt
+33.;09.-11.05.2025;Nurnberg;FC Koln
+33.;09.-11.05.2025;FFortuna Dusseldorf;Schalke 04
+33.;09.-11.05.2025;Hamburg;Ulm
+33.;09.-11.05.2025;Hannover;Greuther Furth
+33.;09.-11.05.2025;Preußen Münster;Hertha
+33.;09.-11.05.2025;Paderborn;Magdeburg
+33.;09.-11.05.2025;Regensburg;Karlsruhe
+33.;09.-11.05.2025;Elversberg;Braunschweig
+34.;18.05.25;15:30;(So);FC Koln;Kaiserslautern
+34.;18.05.25;15:30;(So);Magdeburg;FFortuna Dusseldorf
+34.;18.05.25;15:30;(So);Braunschweig;Nurnberg
+34.;18.05.25;15:30;(So);Schalke 04;Elversberg
+34.;18.05.25;15:30;(So);Hertha;Hannover
+34.;18.05.25;15:30;(So);Karlsruhe;Paderborn
+34.;18.05.25;15:30;(So);Greuther Furth;Hamburg
+34.;18.05.25;15:30;(So);Ulm;Preußen Münster
+34.;18.05.25;15:30;(So);Darmstadt;Regensburg
+
