@@ -7,11 +7,11 @@ from sklearn.metrics import accuracy_score, auc, roc_curve
 from sklearn.metrics import classification_report, confusion_matrix
 from sklearn.model_selection import GridSearchCV, train_test_split
 from sklearn.ensemble import GradientBoostingClassifier
-from Model_Training_GradientBoost.preprocessData_Training import preprocess_bundesliga_data
+from preprocessData_Training import preprocess_bundesliga_data
 
 # Load and prepare data
 print("Loading and preprocessing data...")
-X, y, feature_names = preprocess_bundesliga_data('Datafiles/Bundesliga_MatchStats.csv')
+X, y, feature_names = preprocess_bundesliga_data('FootBall_Datafiles/Bundesliga_MatchStats.csv')
 
 # Verify data structure
 print("\nData Structure Verification:")
@@ -30,22 +30,24 @@ print(f"Test samples: {len(X_test)}")
 
 # Define model parameters
 param_grid = {
-    'n_estimators': [100, 200, 300],
-    'learning_rate': [0.03, 0.05, 0.1],
-    'max_depth': [3, 4, 5],
-    'min_samples_split': [2, 3],
-    'min_samples_leaf': [1, 2]
+    'n_estimators': [100, 200, 300, 500],
+    'learning_rate': [0.01, 0.02, 0.05],
+    'max_depth': [3, 4, 5, 6, 7],
+    'min_samples_split': [2, 3, 4],
+    'min_samples_leaf': [1, 2, 4]
 }
 
-print("\nTraining model...")
+
 grid_search = GridSearchCV(
-    GradientBoostingClassifier(random_state=42),
+    GradientBoostingClassifier(),
     param_grid,
     cv=5,
-    scoring='accuracy',
+    scoring=['accuracy'],  # Use "roc_auc_ovr" for multiclass
     verbose=1,
     n_jobs=-1
 )
+
+
 grid_search.fit(X_train, y_train)
 
 best_model = grid_search.best_estimator_

@@ -7,7 +7,7 @@ from sklearn.metrics import accuracy_score, auc, roc_curve
 from sklearn.metrics import classification_report, confusion_matrix
 from sklearn.model_selection import GridSearchCV, train_test_split
 from sklearn.ensemble import RandomForestClassifier
-from Model_Training_RandomForest.preprocessData_Training import preprocess_bundesliga_data
+from preprocessData_Training import preprocess_bundesliga_data
 
 # Load and prepare data
 print("Loading and preprocessing data...")

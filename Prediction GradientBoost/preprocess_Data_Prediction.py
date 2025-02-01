@@ -37,10 +37,17 @@ def preprocess_bundesliga_data(training_csv_path, prediction_csv_path=None):
         for feat in base_features:
             stat_key = f"{role}Team{feat}"
             history = team_stats[team][stat_key]
-            avg = (np.mean(history[-19:]) if len(history) >= 19 
+            avg = (np.mean(history[-20:]) if len(history) >= 20 
                   else np.mean(history) if history else 0)
             features.append(avg)
             feature_names.append(f'Avg_{role}_{feat}')
+        
+        # Add Conceded Goals feature
+        conceded_history = team_stats[team]['ConcededGoals']
+        avg_conceded = (np.mean(conceded_history[-20:]) if len(conceded_history) >= 20 
+                       else np.mean(conceded_history) if conceded_history else 0)
+        features.append(avg_conceded)
+        feature_names.append('Avg_ConcededGoals')
         
         # Calculate trend based on last 3 games
         trend_history = team_stats[team]['Results'][-3:] if team_stats[team]['Results'] else []
@@ -51,8 +58,6 @@ def preprocess_bundesliga_data(training_csv_path, prediction_csv_path=None):
             trend = np.mean(points)
         features.append(trend)
         feature_names.append(f'{role}_Trend')
-
-        
         
         # Win statistics
         if is_home:
@@ -64,17 +69,17 @@ def preprocess_bundesliga_data(training_csv_path, prediction_csv_path=None):
         
         # Add win features
         if is_home:
-            hw_avg = (np.mean(home_wins[-19:]) if len(home_wins) >= 19 
+            hw_avg = (np.mean(home_wins[-20:]) if len(home_wins) >= 20 
                      else np.mean(home_wins) if home_wins else 0)
             features.append(hw_avg)
             feature_names.append('Avg_Home_HomeWins')
         else:
-            aw_avg = (np.mean(away_wins[-19:]) if len(away_wins) >= 19 
+            aw_avg = (np.mean(away_wins[-20:]) if len(away_wins) >= 20 
                      else np.mean(away_wins) if away_wins else 0)
             features.append(aw_avg)
             feature_names.append('Avg_Away_AwayWins')
         
-        tw_avg = (np.mean(total_wins[-19:]) if len(total_wins) >= 19 
+        tw_avg = (np.mean(total_wins[-20:]) if len(total_wins) >= 20 
                  else np.mean(total_wins) if total_wins else 0)
         features.append(tw_avg)
         feature_names.append(f'Avg_{role}_TotalWins')
@@ -105,8 +110,9 @@ def preprocess_bundesliga_data(training_csv_path, prediction_csv_path=None):
                     team_stats[team] = {
                         **{f"HomeTeam{feat}": [] for feat in base_features},
                         **{f"AwayTeam{feat}": [] for feat in base_features},
+                        'ConcededGoals': [],  # New field for tracking conceded goals
                         'HomeWins': [], 'AwayWins': [], 'TotalWins': [],
-                        'Results': []  # New field for tracking match results
+                        'Results': []
                     }
             
             # Calculate features with validation
@@ -157,6 +163,10 @@ def preprocess_bundesliga_data(training_csv_path, prediction_csv_path=None):
                 # Store only relevant statistics
                 team_stats[home_team][f'HomeTeam{feat}'].append(home_value)
                 team_stats[away_team][f'AwayTeam{feat}'].append(away_value)
+            
+            # Track conceded goals for both teams
+            team_stats[home_team]['ConcededGoals'].append(game['AwayTeamGoals'])
+            team_stats[away_team]['ConcededGoals'].append(game['HomeTeamGoals'])
         
         final_team_stats.update(team_stats)
     
@@ -187,6 +197,7 @@ def preprocess_bundesliga_data(training_csv_path, prediction_csv_path=None):
                 final_team_stats[team] = {
                     **{f"HomeTeam{feat}": [] for feat in base_features},
                     **{f"AwayTeam{feat}": [] for feat in base_features},
+                    'ConcededGoals': [],  # Ensure ConcededGoals is initialized
                     'HomeWins': [], 'AwayWins': [], 'TotalWins': [],
                     'Results': []
                 }

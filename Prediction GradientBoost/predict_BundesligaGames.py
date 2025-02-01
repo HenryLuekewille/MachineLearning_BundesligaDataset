@@ -12,8 +12,8 @@ from preprocess_Data_Prediction import preprocess_bundesliga_data
 # Load and prepare all historical data and future matches
 print("Loading and preprocessing data...")
 X, y, X_pred, prediction_matches, feature_names = preprocess_bundesliga_data(
-    'Datafiles/2Bundesliga_MatchStats.csv',  # Historical data
-    'Datafiles/2_bundesliga_spielplan_corrected_semicolon.csv'         # Future matches
+    'FootBall_Datafiles/Bundesliga_MatchStats.csv',  # Historical data
+    'FootBall_Datafiles/Bundesligagameplan_24_25.csv'         # Future matches
 )
 
 print("\nData Structure:")
@@ -23,9 +23,9 @@ print(f"Number of features: {X.shape[1]}")
 # Define model parameters
 param_grid = {
     'n_estimators': [100, 200, 300],
-    'learning_rate': [0.03, 0.05, 0.1],
-    'max_depth': [3, 4, 5],
-    'min_samples_split': [2, 3],
+    'learning_rate': [0.02, 0.03, 0.05, 0.1],
+    'max_depth': [4, 5, 6],
+    'min_samples_split': [2, 3, 4],
     'min_samples_leaf': [1, 2]
 }
 
@@ -43,6 +43,7 @@ grid_search.fit(X, y)
 
 best_model = grid_search.best_estimator_
 print("\nBest parameters:", grid_search.best_params_)
+
 
 # Make predictions for future games
 y_pred = best_model.predict(X_pred)
@@ -78,8 +79,8 @@ for _, row in predictions_df.iterrows():
           f"{row['AwayWin_Prob']:^8.3f} {row['Predicted_Result']:^8}")
 
 # Save predictions to CSV
-predictions_df.to_csv('2Bundesligapredictions_current_season.csv', index=False)
-print("\nPredictions saved to 'predictions_current_season.csv'")
+predictions_df.to_csv('predictions_Bundesliga.csv', index=False)
+print("\nPredictions saved to 'predictions_Bundesliga.csv'")
 
 # Feature importance analysis
 importance_df = pd.DataFrame({

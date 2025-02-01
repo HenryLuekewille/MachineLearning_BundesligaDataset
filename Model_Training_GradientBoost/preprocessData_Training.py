@@ -14,22 +14,15 @@ class FeatureSet:
         return self
 
 def preprocess_bundesliga_data(training_csv_path):
-    """
-    Preprocesses Bundesliga match data tracking relevant team statistics and trend.
-    Returns processed features and labels for training.
-    """
-    # Load training data
     df_train = pd.read_csv(training_csv_path, delimiter=';')
     df_train.columns = df_train.columns.str.strip()
     
-    # Define base features (without team prefix)
     base_features = [
-        'Goals', 'Shots', 'ShotsOnTarget',  
+        'Goals', 'Shots', 'ShotsOnTarget', 
         'Yellow', 'Red'
     ]
     
     def calculate_team_features(team_stats: Dict[str, List], team: str, is_home: bool) -> FeatureSet:
-        """Calculate relevant features for each team based on their role"""
         features = []
         feature_names = []
         role = "Home" if is_home else "Away"
@@ -38,22 +31,32 @@ def preprocess_bundesliga_data(training_csv_path):
         for feat in base_features:
             stat_key = f"{role}Team{feat}"
             history = team_stats[team][stat_key]
-            avg = (np.mean(history[-19:]) if len(history) >= 19 
+            avg = (np.mean(history[-20:]) if len(history) >= 20 
                   else np.mean(history) if history else 0)
             features.append(avg)
             feature_names.append(f'Avg_{role}_{feat}')
         
-        # Calculate trend based on last 3 games
+        # Separate home and away conceded goals
+        if is_home:
+            conceded_history = team_stats[team]['HomeConcededGoals']
+        else:
+            conceded_history = team_stats[team]['AwayConcededGoals']
+            
+        avg_conceded = (np.mean(conceded_history[-20:]) if len(conceded_history) >= 20 
+                       else np.mean(conceded_history) if conceded_history else 0)
+        features.append(avg_conceded)
+        feature_names.append(f'Avg_{role}_ConcededGoals')
+        
+        # Rest of the feature calculation remains the same
         trend_history = team_stats[team]['Results'][-3:] if team_stats[team]['Results'] else []
         trend = 0
         if trend_history:
-            # Convert results to points (win=3, draw=1, loss=0)
             points = [3 if result == 'W' else 1 if result == 'D' else 0 for result in trend_history]
             trend = np.mean(points)
         features.append(trend)
         feature_names.append(f'{role}_Trend')
         
-        # Win statistics
+        # Win statistics calculation
         if is_home:
             home_wins = team_stats[team]['HomeWins']
             total_wins = team_stats[team]['TotalWins']
@@ -63,29 +66,27 @@ def preprocess_bundesliga_data(training_csv_path):
         
         # Add win features
         if is_home:
-            hw_avg = (np.mean(home_wins[-19:]) if len(home_wins) >= 19 
+            hw_avg = (np.mean(home_wins[-20:]) if len(home_wins) >= 20 
                      else np.mean(home_wins) if home_wins else 0)
             features.append(hw_avg)
             feature_names.append('Avg_Home_HomeWins')
         else:
-            aw_avg = (np.mean(away_wins[-19:]) if len(away_wins) >= 19 
+            aw_avg = (np.mean(away_wins[-20:]) if len(away_wins) >= 20 
                      else np.mean(away_wins) if away_wins else 0)
             features.append(aw_avg)
             feature_names.append('Avg_Away_AwayWins')
         
-        tw_avg = (np.mean(total_wins[-19:]) if len(total_wins) >= 19 
+        tw_avg = (np.mean(total_wins[-20:]) if len(total_wins) >= 20 
                  else np.mean(total_wins) if total_wins else 0)
         features.append(tw_avg)
         feature_names.append(f'Avg_{role}_TotalWins')
         
         return FeatureSet(names=feature_names, values=features).validate()
     
-    # Initialize processing variables
     X_processed = []
     y_processed = []
     feature_names = None
     
-    # Process historical data
     for season in df_train['Season'].unique():
         season_data = df_train[df_train['Season'] == season].sort_values('Gameday')
         team_stats = {}
@@ -97,64 +98,58 @@ def preprocess_bundesliga_data(training_csv_path):
             away_team = game['AwayTeam']
             gameday = game['Gameday']
             
-            # Initialize team stats if needed
             for team in [home_team, away_team]:
                 if team not in team_stats:
                     team_stats[team] = {
                         **{f"HomeTeam{feat}": [] for feat in base_features},
                         **{f"AwayTeam{feat}": [] for feat in base_features},
+                        'HomeConcededGoals': [],  # Separate home conceded goals
+                        'AwayConcededGoals': [],  # Separate away conceded goals
                         'HomeWins': [], 'AwayWins': [], 'TotalWins': [],
                         'Results': []
                     }
             
-            # Calculate features with validation
             home_features = calculate_team_features(team_stats, home_team, is_home=True)
             away_features = calculate_team_features(team_stats, away_team, is_home=False)
             
-            # Store feature names from first iteration
             if feature_names is None:
                 feature_names = home_features.names + away_features.names
                 print("\nFeature structure:")
                 for i, name in enumerate(feature_names):
                     print(f"{i:2d}: {name}")
             
-            # Combine features
             all_features = home_features.values + away_features.values
             
-            if gameday > 1:  # Don't use first game for training
+            if gameday > 1:
                 X_processed.append(all_features)
                 if game['Result'] == 'H':
                     y_processed.append(0)
                 elif game['Result'] == 'A':
                     y_processed.append(1)
-                else:  # Draw
+                else:
                     y_processed.append(2)
             
-            # Update stats after feature calculation
             if gameday > 1:
                 result = game['Result']
                 
-                # Update win stats
-                is_home_win = result == 'H'
-                is_away_win = result == 'A'
+                team_stats[home_team]['Results'].append('W' if result == 'H' else 'D' if result == 'D' else 'L')
+                team_stats[away_team]['Results'].append('W' if result == 'A' else 'D' if result == 'D' else 'L')
                 
-                # Update results for trend calculation
-                team_stats[home_team]['Results'].append('W' if is_home_win else 'D' if result == 'D' else 'L')
-                team_stats[away_team]['Results'].append('W' if is_away_win else 'D' if result == 'D' else 'L')
-                
-                team_stats[home_team]['HomeWins'].append(1 if is_home_win else 0)
-                team_stats[away_team]['AwayWins'].append(1 if is_away_win else 0)
-                team_stats[home_team]['TotalWins'].append(1 if is_home_win else 0)
-                team_stats[away_team]['TotalWins'].append(1 if is_away_win else 0)
+                team_stats[home_team]['HomeWins'].append(1 if result == 'H' else 0)
+                team_stats[away_team]['AwayWins'].append(1 if result == 'A' else 0)
+                team_stats[home_team]['TotalWins'].append(1 if result == 'H' else 0)
+                team_stats[away_team]['TotalWins'].append(1 if result == 'A' else 0)
             
-            # Update game stats
             for feat in base_features:
                 home_value = game[f'HomeTeam{feat}']
                 away_value = game[f'AwayTeam{feat}']
                 
-                # Store only relevant statistics
                 team_stats[home_team][f'HomeTeam{feat}'].append(home_value)
                 team_stats[away_team][f'AwayTeam{feat}'].append(away_value)
+            
+            # Track home and away conceded goals separately
+            team_stats[home_team]['HomeConcededGoals'].append(game['AwayTeamGoals'])
+            team_stats[away_team]['AwayConcededGoals'].append(game['HomeTeamGoals'])
     
     X = np.array(X_processed)
     y = np.array(y_processed)

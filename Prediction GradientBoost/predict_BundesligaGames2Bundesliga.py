@@ -12,8 +12,8 @@ from preprocess_Data_Prediction import preprocess_bundesliga_data
 # Load and prepare all historical data and future matches
 print("Loading and preprocessing data...")
 X, y, X_pred, prediction_matches, feature_names = preprocess_bundesliga_data(
-    'Datafiles/Bundesliga_MatchStats.csv',  # Historical data
-    'Datafiles/gameplan_24_25.csv'         # Future matches
+    'FootBall_Datafiles/2Bundesliga_MatchStats.csv',  # Historical data
+    'FootBall_Datafiles/2Bundesliga_GamePlan.csv'         # Future matches
 )
 
 print("\nData Structure:")
@@ -78,8 +78,8 @@ for _, row in predictions_df.iterrows():
           f"{row['AwayWin_Prob']:^8.3f} {row['Predicted_Result']:^8}")
 
 # Save predictions to CSV
-predictions_df.to_csv('predictions_current_season.csv', index=False)
-print("\nPredictions saved to 'predictions_current_season.csv'")
+predictions_df.to_csv('predictions_2Bundesliga.csv', index=False)
+print("\nPredictions saved to 'predictions_2Bundesliga.csv'")
 
 # Feature importance analysis
 importance_df = pd.DataFrame({
